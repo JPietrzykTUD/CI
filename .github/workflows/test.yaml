@@ -27,5 +27,6 @@ jobs:
             rm -rf /tmp/* /var/cache/apk/*
             ls
             pip install -r requirements.txt
-            python main.py --targets $(LANG=en;lscpu|grep -i flags | tr ' ' '\n' | grep -v -E '^Flags:|^$' | sort -d | tr '\n' ' ') -o tsl_lib
+            python main.py --targets neon asimd -o tsl_lib
             cmake -S . -B tsl -DUSE_EXISTING_TSL_PATH=./tsl_lib
+            make -j -C tsl
