@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: "git@github.com:db-tu-dresden/TSL.git"
+          repository: db-tu-dresden/TSL
       - name: ARM build
         uses: uraimo/run-on-arch-action@v2
         with:
