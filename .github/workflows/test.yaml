@@ -21,9 +21,10 @@ jobs:
           githubToken: ${{ github.token }}
           run: |
             set -x
-            apk update
-            apk add gcc g++ cmake make automake gdb
-            apk add openssh ninja autoconf dos2unix wget xz tar rsync python3 git util-linux py3-pip py3-babel py3-lxml py3-markupsafe py3-matplotlib py3-numpy py3-pandas py3-pillow py3-scipy py3-networkx py3-jinja2 libstdc++ freetype-dev libpng-dev openblas-dev py-yaml graphviz-dev linux-headers libffi-dev
-            rm -rf /tmp/* /var/cache/apk/*
-            ls
-            pip install -r requirements.txt
+            #apk update
+            #apk add gcc g++ cmake make automake gdb
+            #apk add openssh ninja autoconf dos2unix wget xz tar rsync python3 git util-linux py3-pip py3-babel py3-lxml py3-markupsafe py3-matplotlib py3-numpy py3-pandas py3-pillow py3-scipy py3-networkx py3-jinja2 libstdc++ freetype-dev libpng-dev openblas-dev py-yaml graphviz-dev linux-headers libffi-dev
+            #rm -rf /tmp/* /var/cache/apk/*
+            #ls
+            #pip install -r requirements.txt
+            lscpu
