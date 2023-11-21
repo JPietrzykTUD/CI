@@ -13,40 +13,40 @@ jobs:
         uses: jirutka/setup-alpine@v1.1.4
         with:
           arch: aarch64
-          packages: 
-            - g++
-            - cmake
-            - make
-            - openssh
-            - ninja
-            - autoconf
-            - dos2unix
-            - wget
-            - xz
-            - tar
-            - rsync
-            - python3
-            - git
-            - util-linux
-            - py3-pip
-            - py3-babel
-            - py3-lxml
-            - py3-markupsafe
-            - py3-matplotlib
-            - py3-numpy
-            - py3-pandas
-            - py3-pillow
-            - py3-scipy
-            - py3-networkx
-            - py3-jinja2
-            - libstdc++
-            - freetype-dev
-            - libpng-dev
-            - openblas-dev
-            - py-yaml
-            - graphviz-dev
-            - linux-headers
-            - libffi-dev
+          packages: >
+            g++
+            cmake
+            make
+            openssh
+            ninja
+            autoconf
+            dos2unix
+            wget
+            xz
+            tar
+            rsync
+            python3
+            git
+            util-linux
+            py3-pip
+            py3-babel
+            py3-lxml
+            py3-markupsafe
+            py3-matplotlib
+            py3-numpy
+            py3-pandas
+            py3-pillow
+            py3-scipy
+            py3-networkx
+            py3-jinja2
+            libstdc++
+            freetype-dev
+            libpng-dev
+            openblas-dev
+            py-yaml
+            graphviz-dev
+            linux-headers
+            libffi-dev
       - name: Checkout
         uses: actions/checkout@v4
         with:
