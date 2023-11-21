@@ -50,14 +50,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          path: TEST
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
           repository: db-tu-dresden/TSL
+          path: TSL
       - name: Install Python dependencies into alpine shell
         run: |
-          pip install -r requirements.txt
+          pip install -r ./TEST/requirements.txt
         shell: alpine.sh {0}          
       - name: Generate TSL for neon and asimd
         run: |
-          pip install -r requirements.txt
+          cd TSL
           python main.py --targets neon asimd -o tsl_lib
           cmake -S . -B tsl -DUSE_EXISTING_TSL_PATH=./tsl_lib
           make -j -C tsl
